@@ -13,6 +13,7 @@ public class PlayerController2D : MonoBehaviour
     [SerializeField]
     Transform groundCheck;
     public float walkSpeed;
+    public float jumpSpeed;
 
     // Start is called before the first frame update
     void Start()
