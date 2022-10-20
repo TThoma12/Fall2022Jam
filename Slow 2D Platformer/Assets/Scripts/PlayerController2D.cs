@@ -7,6 +7,7 @@ public class PlayerController2D : MonoBehaviour
     Animator animator;
     Rigidbody2D rb2d;
     SpriteRenderer spriteRenderer;
+    Vector2 startingPos;
 
     private bool isGrounded;
 
@@ -21,6 +22,7 @@ public class PlayerController2D : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        startingPos = new Vector2(transform.position.x, transform.position.y);
     }
 
     // Update is called once per frame
@@ -74,10 +76,16 @@ public class PlayerController2D : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetKey("w") && isGrounded)
+        if ((Input.GetKey("w") || Input.GetKey(KeyCode.Space)) && isGrounded)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, 10);
             animator.Play("Human Clyde Jump");
+        }
+
+        //Respawn
+        if (transform.position.y <= -13)
+        {
+            transform.position = startingPos;
         }
     }
 
