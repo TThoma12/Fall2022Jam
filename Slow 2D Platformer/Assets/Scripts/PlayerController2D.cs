@@ -76,7 +76,7 @@ public class PlayerController2D : MonoBehaviour
         // Jump
         if (Input.GetKey("w") && isGrounded)
         {
-            rb2d.velocity = new Vector2(rb2d.velocity.x, 11);
+            rb2d.velocity = new Vector2(rb2d.velocity.x, 10);
             animator.Play("Human Clyde Jump");
         }
     }
