@@ -80,4 +80,12 @@ public class PlayerController2D : MonoBehaviour
             animator.Play("Human Clyde Jump");
         }
     }
+
+    private void OnCollisionEnter2D (Collision2D collision)
+    {
+        if (GameObject.tag == "Platform")
+        {
+            isGrounded = true;
+        }
+    }
 }
