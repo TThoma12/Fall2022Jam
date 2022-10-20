@@ -45,21 +45,29 @@ public class PlayerController2D : MonoBehaviour
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2d.velocity = new Vector2(2, rb2d.velocity.y);
-            animator.Play("Human Clyde Walk");
+
+            if (isGrounded)
+                animator.Play("Human Clyde Walk");
+           
             spriteRenderer.flipX = false;
         }
 
         else if (Input.GetKey("a") || Input.GetKey("left"))
         {
             rb2d.velocity = new Vector2(-2, rb2d.velocity.y);
-            animator.Play("Human Clyde Walk");
+
+            if (isGrounded)
+                animator.Play("Human Clyde Walk");
+            
             spriteRenderer.flipX = true;
         }
 
         // Idle
         else
         {
-            animator.Play("Human Clyde Idle");
+            if (isGrounded)
+                animator.Play("Human Clyde Idle");
+            
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
         }
 
