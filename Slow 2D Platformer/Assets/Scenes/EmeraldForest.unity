@@ -4243,7 +4243,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1254687653}
   timeOffset: 5
-  posOffset: {x: 2, y: 3}
+  posOffset: {x: 2, y: 2}
+  leftLimit: 0
+  rightLimit: 100
+  bottomLimit: 0
+  topLimit: 30
 --- !u!1001 &2014877775
 PrefabInstance:
   m_ObjectHideFlags: 0
