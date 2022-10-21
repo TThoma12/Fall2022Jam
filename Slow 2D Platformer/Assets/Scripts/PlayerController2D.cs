@@ -13,7 +13,9 @@ public class PlayerController2D : MonoBehaviour
     public AudioClip[] playerSE;
 
     private bool _isGrounded;
-    private bool isHuman = true;
+    
+    [System.NonSerialized]
+    public bool isHuman = true;
     private BoxCollider2D playerCollider;
 
     private bool isGrounded {
@@ -36,6 +38,7 @@ public class PlayerController2D : MonoBehaviour
     private string animWalk = "MoveDirection";
     private string animGrd = "Grounded";
     private string animTransform = "Transform";
+    private string animCrouch = "Crouch";
 
     private Animator _animator;
     public Animator animator {
@@ -67,17 +70,34 @@ public class PlayerController2D : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Transform();
+        }
+
+        // crouch
+        else if (animator.GetInteger(animWalk) == 0 && !isHuman)
+        {
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down"))
+            {
+                animator.SetBool(animCrouch, true);
+            }
+            else if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp("down"))
+            {
+                animator.SetBool(animCrouch, false);
+            }
+        }
+    }
+
+
+    private void DoStateChange()
+    {
+        animator.SetBool(animTransform, isHuman);
     }
 
     // This is responsible for the overall player movement
     private void FixedUpdate()
     {
-
-        if (Input.GetKeyDown(KeyCode.Z)){
-            animator.SetTrigger(animTransform);
-        }
-
         // This will check the raycast of the player's ground check
         if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
         {
@@ -89,7 +109,6 @@ public class PlayerController2D : MonoBehaviour
             isGrounded = false;
         }
 
-        // Move
         if (Input.GetKey("d") || Input.GetKey("right"))
         {
             rb2d.velocity = new Vector2(walkSpeed, rb2d.velocity.y);
@@ -149,6 +168,15 @@ public class PlayerController2D : MonoBehaviour
             respawnPos = collision.transform.position;
             audioSource.PlayOneShot(playerSE[2]);
         }
+    }
+
+    private void Transform()
+    {
+        animator.SetTrigger(animTransform);
+        SetColliderDimensions();
+        isHuman = !isHuman;
+
+
     }
 
     private Vector2 SetColliderDimensions()
