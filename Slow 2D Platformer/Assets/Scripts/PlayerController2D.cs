@@ -8,7 +8,10 @@ public class PlayerController2D : MonoBehaviour
     Rigidbody2D rb2d;
     SpriteRenderer spriteRenderer;
     Vector2 startingPos;
+    Vector2 respawnPos;
 
+    public AudioSource audioSource;
+    public AudioClip[] playerSE;
     private bool isGrounded;
 
     [SerializeField]
@@ -22,7 +25,9 @@ public class PlayerController2D : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         startingPos = new Vector2(transform.position.x, transform.position.y);
+        respawnPos = startingPos;
     }
 
     // Update is called once per frame
@@ -80,12 +85,14 @@ public class PlayerController2D : MonoBehaviour
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, 10);
             animator.Play("Human Clyde Jump");
+            audioSource.PlayOneShot(playerSE[0]);
         }
 
         //Respawn
         if (transform.position.y <= -13)
         {
-            transform.position = startingPos;
+            audioSource.PlayOneShot(playerSE[1]);
+            transform.position = respawnPos;
         }
     }
 
@@ -94,6 +101,12 @@ public class PlayerController2D : MonoBehaviour
         if (gameObject.tag == "Platform")
         {
             isGrounded = true;
+        }
+
+        if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            respawnPos = collision.transform.position;
+            audioSource.PlayOneShot(playerSE[2]);
         }
     }
 }

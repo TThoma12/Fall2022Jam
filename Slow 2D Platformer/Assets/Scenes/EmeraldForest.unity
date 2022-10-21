@@ -4082,6 +4082,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2d85a532dd6524d97b8ec548cca826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  playerSE:
+  - {fileID: 8300000, guid: aef22e33e987997488031f18ed41a99e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
   groundCheck: {fileID: 794272491}
   walkSpeed: 7
   jumpSpeed: 5
