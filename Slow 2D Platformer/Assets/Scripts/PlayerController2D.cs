@@ -33,7 +33,6 @@ public class PlayerController2D : MonoBehaviour
 
     private string animWalk = "MoveDirection";
     private string animGrd = "Grounded";
-    private string animJump = "Jump";
     private string animTransform = "Transform";
 
     private Animator _animator;
@@ -72,6 +71,11 @@ public class PlayerController2D : MonoBehaviour
     // This is responsible for the overall player movement
     private void FixedUpdate()
     {
+
+        if (Input.GetKeyDown(KeyCode.Z)){
+            animator.SetTrigger(animTransform);
+        }
+
         // This will check the raycast of the player's ground check
         if (Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground")))
         {
@@ -120,7 +124,6 @@ public class PlayerController2D : MonoBehaviour
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, 10);
             //animator.Play("Human Clyde Jump");
-            animator.SetTrigger(animJump);
             audioSource.PlayOneShot(playerSE[0]);
         }
 
