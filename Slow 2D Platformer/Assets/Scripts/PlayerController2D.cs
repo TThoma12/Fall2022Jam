@@ -13,6 +13,8 @@ public class PlayerController2D : MonoBehaviour
     public AudioClip[] playerSE;
 
     private bool _isGrounded;
+    private bool isHuman = true;
+    private BoxCollider2D playerCollider;
 
     private bool isGrounded {
         get
@@ -146,6 +148,19 @@ public class PlayerController2D : MonoBehaviour
         {
             respawnPos = collision.transform.position;
             audioSource.PlayOneShot(playerSE[2]);
+        }
+    }
+
+    private Vector2 SetColliderDimensions()
+    {
+        if (isHuman)
+        {
+            return new Vector2(1f, 2f);
+        }
+
+        else
+        {
+            return new Vector2(1f, 1f);
         }
     }
 }
