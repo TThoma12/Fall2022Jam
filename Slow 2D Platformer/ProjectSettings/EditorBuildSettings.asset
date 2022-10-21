@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/EmeraldForest.unity
+    guid: e5a6cd6d705aef447afa2f9d1f284582
+  - enabled: 1
+    path: Assets/Scenes/LevelCompleteScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
