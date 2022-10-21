@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerController2D : MonoBehaviour
 {
-    Animator animator;
     Rigidbody2D rb2d;
     SpriteRenderer spriteRenderer;
     Vector2 startingPos;
@@ -12,17 +11,51 @@ public class PlayerController2D : MonoBehaviour
 
     public AudioSource audioSource;
     public AudioClip[] playerSE;
-    private bool isGrounded;
+
+    private bool _isGrounded;
+
+    private bool isGrounded {
+        get
+        {
+            return _isGrounded;
+        }
+        set
+        {
+            _isGrounded = value;
+            animator.SetBool(animGrd, value);
+        }
+    }
 
     [SerializeField]
     Transform groundCheck;
     public float walkSpeed;
     public float jumpSpeed;
 
+    private string animWalk = "MoveDirection";
+    private string animGrd = "Grounded";
+    private string animJump = "Jump";
+    private string animTransform = "Transform";
+
+    private Animator _animator;
+    public Animator animator {
+        get
+        {
+            if (_animator == null)
+            {
+                _animator = GetComponent<Animator>();
+                if (_animator == null)
+                {
+                    Debug.LogError("No Animator found on Player. Please add one thx");
+                    return null;
+                }
+            }
+            return _animator;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = gameObject.GetComponent<AudioSource>();
@@ -56,7 +89,7 @@ public class PlayerController2D : MonoBehaviour
             rb2d.velocity = new Vector2(walkSpeed, rb2d.velocity.y);
 
             if (isGrounded)
-                animator.Play("Human Clyde Walk");
+                animator.SetInteger(animWalk, 1);
            
             spriteRenderer.flipX = false;
         }
@@ -66,7 +99,8 @@ public class PlayerController2D : MonoBehaviour
             rb2d.velocity = new Vector2(-walkSpeed, rb2d.velocity.y);
 
             if (isGrounded)
-                animator.Play("Human Clyde Walk");
+                animator.SetInteger(animWalk, -1);
+                //animator.Play("Human Clyde Walk");
             
             spriteRenderer.flipX = true;
         }
@@ -75,7 +109,8 @@ public class PlayerController2D : MonoBehaviour
         else
         {
             if (isGrounded)
-                animator.Play("Human Clyde Idle");
+                //animator.Play("Human Clyde Idle");
+                animator.SetInteger(animWalk, 0);
             
             rb2d.velocity = new Vector2(0, rb2d.velocity.y);
         }
@@ -84,7 +119,8 @@ public class PlayerController2D : MonoBehaviour
         if ((Input.GetKey("w") || Input.GetKey(KeyCode.Space)) && isGrounded)
         {
             rb2d.velocity = new Vector2(rb2d.velocity.x, 10);
-            animator.Play("Human Clyde Jump");
+            //animator.Play("Human Clyde Jump");
+            animator.SetTrigger(animJump);
             audioSource.PlayOneShot(playerSE[0]);
         }
 
