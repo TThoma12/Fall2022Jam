@@ -126,7 +126,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Clyde_Trans_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 12
+        width: 19
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2edaa9288f8d5e940a5b4fce24762f2c
+      internalID: 654780848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_2
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 12
+        width: 19
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224f2a8ddbb9e6648becbd11fb09e17c
+      internalID: 1622154296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_3
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 12
+        width: 19
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2831cf2cc88eb4e4da7caa416a3e15f5
+      internalID: -1042744015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 12
+        width: 26
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229270f10c093124385d1a5f6b2b325b
+      internalID: 1850281931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_5
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 9
+        width: 42
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec43a1b9b55d9843acd32cb460072c9
+      internalID: 1817608869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 11
+        width: 37
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b35593cdc304a4781cac2c8bf020bf
+      internalID: -1635670765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_7
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 11
+        width: 37
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4088f46918163d74c8db76f0b9a3f0c0
+      internalID: -1939687934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_8
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 9
+        width: 41
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda5a294da501e24fa2096a10c57b44b
+      internalID: 103603951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_9
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 12
+        width: 42
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31af874497fa8e0498517c1ba608beec
+      internalID: -1753464359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde Transformation Animation (Merged)_9
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 22
+        width: 12
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39928ca34714e447ad1c630280615ff
+      internalID: 856119981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_10
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 9
+        width: 36
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31644748ecd5274ebcec7b5698d3223
+      internalID: -436612687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde Transformation Animation (Merged)_11
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 37
+        width: 25
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba58095dca39cc48806057168f3db9e
+      internalID: -407558181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_11
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 7
+        width: 37
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7ac56eddb037b45beed02c96d32b9c
+      internalID: 1365153747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_12
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 12
+        width: 17
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 751a86cdf997bf541b37726b9d2705a4
+      internalID: -1230200056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_13
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 12
+        width: 17
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebae82e663117ff40854509ecb8e4458
+      internalID: -588658900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Clyde_Trans_14
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 12
+        width: 17
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb049b0bc7044946b129faa078f5944
+      internalID: 41014295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -137,7 +473,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Clyde_Trans_4: 1850281931
+      Clyde_Trans_10: -436612687
+      Clyde_Trans_7: -1939687934
+      Clyde_Trans_3: -1042744015
+      Clyde Transformation Animation (Merged)_11: -407558181
+      Clyde_Trans_12: -1230200056
+      Clyde_Trans_6: -1635670765
+      Clyde_Trans_9: -1753464359
+      Clyde_Trans_14: 41014295
+      Clyde_Trans_13: -588658900
+      Clyde Transformation Animation (Merged)_9: 856119981
+      Clyde_Trans_8: 103603951
+      Clyde_Trans_5: 1817608869
+      Clyde_Trans_1: 654780848
+      Clyde_Trans_2: 1622154296
+      Clyde_Trans_11: 1365153747
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
